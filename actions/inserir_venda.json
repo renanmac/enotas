@@ -1,0 +1,918 @@
+{
+  "name":{
+    "pt_BR":"Inserir venda",
+    "en":"Inserir venda"
+  },
+  "action_key":"emitir_notafiscal",
+  "description":{
+    "pt_BR":"Inserir uma venda para emissão de uma nota fiscal de serviço",
+    "en":"Insert a sale to issue an e-Service Tax Invoice"
+  },
+  "action_fields":{
+    "fields":[
+      {
+        "key":"data",
+        "name":{
+          "pt_BR":"Data",
+          "en":"Data"
+        },
+        "description":{
+          "pt_BR":"Data da venda",
+          "en":"Sales Date"
+        },
+        "required":true,
+        "visible":false,
+        "advanced":false,
+        "field_type":"custom",
+        "data_type":"datetime",
+        "date_format":"%d/%m/%Y",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"idExterno",
+        "name":{
+          "pt_BR":"Id externo",
+          "en":"Extern Id"
+        },
+        "description":{
+          "pt_BR":"Id externo da venda",
+          "en":"Id externo da venda"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"vencimento",
+        "name":{
+          "pt_BR":"Vencimento Garantia",
+          "en":"Warranty date"
+        },
+        "description":{
+          "pt_BR":"Caso você tenha optado no campo \"Quando Emitir a Nota Fiscal\" por \"Após a garantia\" é aqui que você define o número de dias após o pagamento/ criação da Fatura que a Nota Fiscal será Emitida. Exemplo: Vamos supor que você queira emitir 7 dias após. Então, basta você mudar o \"+0d\" para \"+7d\".",
+          "en":"Warranty's date"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"datetime",
+        "date_format":"%d/%m/%Y",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.nome",
+        "name":{
+          "pt_BR":"Nome",
+          "en":"Name"
+        },
+        "description":{
+          "pt_BR":"Nome do cliente",
+          "en":"Customer's fullname"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.email",
+        "name":{
+          "pt_BR":"Email",
+          "en":"Email"
+        },
+        "description":{
+          "pt_BR":"Email do cliente",
+          "en":"Customer's email"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.cpfCnpj",
+        "name":{
+          "pt_BR":"CPF/CNPJ",
+          "en":"CPF/CNPJ"
+        },
+        "description":{
+          "pt_BR":"CPF ou CNPJ do cliente",
+          "en":"CPF or CNPJ of the customer (social ID)"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.nomeFantasia",
+        "name":{
+          "pt_BR":"Nome fantasia",
+          "en":"Business name"
+        },
+        "description":{
+          "pt_BR":"Nome fantasia do cliente PJ",
+          "en":"Name of the business"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.inscricaoEstadual",
+        "name":{
+          "pt_BR":"Inscrição estadual",
+          "en":"Federal tax number"
+        },
+        "description":{
+          "pt_BR":"Inscrição estadual do cliente PJ",
+          "en":"Federal tax number of the business"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.inscricaoMunicipal",
+        "name":{
+          "pt_BR":"Inscrição municipal",
+          "en":"Municipal tax number"
+        },
+        "description":{
+          "pt_BR":"Inscrição municipal do cliente",
+          "en":"Municipal tax number of the business"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.telefone",
+        "name":{
+          "pt_BR":"Telefone",
+          "en":"Phonenumber"
+        },
+        "description":{
+          "pt_BR":"Telefone do cliente",
+          "en":"Customer's phone number"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.endereco.cidade",
+        "name":{
+          "pt_BR":"Nome cidade",
+          "en":"City"
+        },
+        "description":{
+          "pt_BR":"Nome da cidade do cliente",
+          "en":"City's name"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.endereco.codigoIbgeCidade",
+        "name":{
+          "pt_BR":"Código IBGE da cidade",
+          "en":"IBGE city number"
+        },
+        "description":{
+          "pt_BR":"Código IBGE da cidade do cliente",
+          "en":"IBGE's ID of the city"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"integer",
+        "data_type":"integer",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.endereco.logradouro",
+        "name":{
+          "pt_BR":"Logradouro",
+          "en":"Street"
+        },
+        "description":{
+          "pt_BR":"Nome logradouro do cliente",
+          "en":"Street name"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.endereco.numero",
+        "name":{
+          "pt_BR":"Número",
+          "en":"Number"
+        },
+        "description":{
+          "pt_BR":"Número do cliente",
+          "en":"Customer's address number"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.endereco.complemento",
+        "name":{
+          "pt_BR":"Complemento",
+          "en":"Complemento"
+        },
+        "description":{
+          "pt_BR":"Complemento do cliente",
+          "en":"Complemento do cliente"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.endereco.bairro",
+        "name":{
+          "pt_BR":"Bairro",
+          "en":"Neighborhood"
+        },
+        "description":{
+          "pt_BR":"Bairro do cliente.",
+          "en":"Neighborhood."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.endereco.cep",
+        "name":{
+          "pt_BR":"Cep",
+          "en":"PostalCode"
+        },
+        "description":{
+          "pt_BR":"Cep do cliente.",
+          "en":"PostalCode."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"produto.nome",
+        "name":{
+          "pt_BR":"Nome do produto",
+          "en":"Product Name"
+        },
+        "description":{
+          "pt_BR":"Nome do produto.",
+          "en":"Product's name."
+        },
+        "required":true,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"produto.idExterno",
+        "name":{
+          "pt_BR":"Id externo do produto",
+          "en":"External id of product"
+        },
+        "description":{
+          "pt_BR":"Id externo do produto.",
+          "en":"External id of product."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"produto.valorTotal",
+        "name":{
+          "pt_BR":"Valor total do produto",
+          "en":"Product price"
+        },
+        "description":{
+          "pt_BR":"Fica armazenado no cadastro do produto no eNotas para posterior referência e reuso para emissão manual, por exemplo.",
+          "en":"Product's price."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom_decimal",
+        "data_type":"decimal",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"valorTotal",
+        "name":{
+          "pt_BR":"Valor total",
+          "en":"Amount"
+        },
+        "description":{
+          "pt_BR":"É o valor da venda em si. Exemplo: você pode ter vendido um produto que custa normalmente R$ 100,00 mas por conta de uma determinada promoção vendeu por R$ 60,00.",
+          "en":"Sale's value."
+        },
+        "required":true,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom_decimal",
+        "data_type":"decimal",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"quandoEmitirNFe",
+        "name":{
+          "pt_BR":"Quando emitir a nota fiscal",
+          "en":"When to issue the invoice"
+        },
+        "label":{
+          "pt_BR":"Quando emitir a nota fiscal",
+          "en":"When to issue the invoice"
+        },
+        "description":{
+          "pt_BR":"Explicando um pouco mais sobre as 3 opções:   \"Após a venda\": A Nota Fiscal é emitida quando houver um novo pagamento aprovado (ou fatura criada), depende de qual automatização você escolheu. \"Não Emitir\": A venda/fatura é registrada no eNotas, mas a nota fiscal não é emitida automaticamente. Ela fica aguardando você acessar o painel do eNotas e emitir quando quiser. \"Após a garantia\": o eNotas aguarda alguns dias após a venda/ fatura registrada (configurado no campo \"Vencimento garantia\") e só emite a nota depois, caso a venda não seja estornada até lá. ",
+          "en":"When to issue the invoice."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":false,
+        "field_type":"dropdown",
+        "data_type":"integer",
+        "list":{
+          "type":"local",
+          "data":[
+            {
+              "label":"Após a venda",
+              "value":0
+            },
+            {
+              "label":"Após a garantia",
+              "value":1
+            },
+            {
+              "label":"Não emitir",
+              "value":2
+            }
+          ]
+        },
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"enviarNFeCliente",
+        "name":{
+          "pt_BR":"Enviar a nota fiscal para o cliente",
+          "en":"Send the invoice to the customer"
+        },
+        "label":{
+          "pt_BR":"Enviar a nota fiscal para o cliente",
+          "en":"Send the invoice to the customer"
+        },
+        "description":{
+          "pt_BR":"Enviar a nota fiscal para o cliente.",
+          "en":"Send the invoice to the customer."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":false,
+        "field_type":"dropdown",
+        "data_type":"boolean",
+        "list":{
+          "type":"local",
+          "data":[
+            {
+              "label":"Sim",
+              "value":true
+            },
+            {
+              "label":"Não",
+              "value":false
+            }
+          ]
+        },
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"meioPagamento",
+        "name":{
+          "pt_BR":"Meio de pagamento da venda",
+          "en":"Payment method"
+        },
+        "label":{
+          "pt_BR":"Meio de pagamento da venda",
+          "en":"Payment method"
+        },
+        "description":{
+          "pt_BR":"Meio de pagamento da venda.",
+          "en":"Payment method."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"dropdown",
+        "data_type":"integer",
+        "list":{
+          "type":"local",
+          "data":[
+            {
+              "label":"Não informado",
+              "value":0
+            },
+            {
+              "label":"Boleto bancario",
+              "value":1
+            },
+            {
+              "label":"Cartão de crédito",
+              "value":2
+            },
+            {
+              "label":"Depósito",
+              "value":3
+            },
+            {
+              "label":"Transferência bancária",
+              "value":4
+            },
+            {
+              "label":"BCash",
+              "value":5
+            },
+            {
+              "label":"PayPal",
+              "value":6
+            },
+            {
+              "label":"Outro",
+              "value":7
+            }
+          ]
+        },
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"municipioPrestacao.nome",
+        "name":{
+          "pt_BR":"Nome do município da prestação",
+          "en":"City's name where the service has been realized"
+        },
+        "description":{
+          "pt_BR":"Nome do município onde o serviço foi prestado. Por padrão utilizamos a cidade da empresa.",
+          "en":"City's name where the service has been realized."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"municipioPrestacao.codigoIbge",
+        "name":{
+          "pt_BR":"Código ibge do município da prestação",
+          "en":"IBGE's number of the city where the service has been realized"
+        },
+        "description":{
+          "pt_BR":"Código ibge do município onde o serviço foi prestado. Por padrão utilizamos a cidade da empresa.",
+          "en":"IBGE's number of the city where the service has been realized."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"integer",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"dataCompetencia",
+        "name":{
+          "pt_BR":"Data da competência",
+          "en":"Date of the service execution"
+        },
+        "description":{
+          "pt_BR":"Data da competência da nota fiscal.",
+          "en":"Date of the service execution."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"datetime",
+        "date_format":"%d-%m-%Y",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"discriminacao",
+        "name":{
+          "pt_BR":"Discriminação do serviço",
+          "en":"Service description"
+        },
+        "description":{
+          "pt_BR":"Discriminação do serviço prestado. Por padrão utilizamos o nome do produto.",
+          "en":"Service description."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"valorTotalNFe",
+        "name":{
+          "pt_BR":"Valor total da nota fiscal",
+          "en":"Invoice amount"
+        },
+        "description":{
+          "pt_BR":"Valor total da nota fiscal. Por padrão utilizamos o valor da venda.",
+          "en":"Invoice amount."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom_decimal",
+        "data_type":"decimal",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"aliquotaIss",
+        "name":{
+          "pt_BR":"Alíquota ISS",
+          "en":"ISS Tax percentual"
+        },
+        "description":{
+          "pt_BR":"Porcentagem da alíquota ISS da nota fiscal. Este é um campo que provavelmente você não precisará preencher pois, na maioria das vezes, o campo fica salvo por padrão na empresa/produto e o eNotas preenche automaticamente.",
+          "en":"ISS Tax percentual."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"string",
+        "data_type":"decimal",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"valorIss",
+        "name":{
+          "pt_BR":"Valor do ISS",
+          "en":"ISS Amount"
+        },
+        "description":{
+          "pt_BR":"Valor do ISS da nota fiscal. Via integração ou importação de arquivo você pode optar por especificar o valor por conta própria, principalmente para bater na questão de arredondamento.",
+          "en":"ISS amount."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"string",
+        "data_type":"decimal",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"issRetidoFonte",
+        "name":{
+          "pt_BR":"Reter ISS",
+          "en":"Retain ISS"
+        },
+        "label":{
+          "pt_BR":"Reter ISS",
+          "en":"Retain ISS"
+        },
+        "description":{
+          "pt_BR":"Reter iss da nota fiscal.",
+          "en":"Retain ISS."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"dropdown",
+        "data_type":"boolean",
+        "list":{
+          "type":"local",
+          "data":[
+            {
+              "label":"Sim",
+              "value":true
+            },
+            {
+              "label":"Não",
+              "value":false
+            }
+          ]
+        },
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"deducoes",
+        "name":{
+          "pt_BR":"Deduções da nota fiscal",
+          "en":"Invoice deductions"
+        },
+        "description":{
+          "pt_BR":"Valor de deduções da nota fiscal.",
+          "en":"Invoice deductions."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom_decimal",
+        "data_type":"decimal",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"observacoes",
+        "name":{
+          "pt_BR":"Observações da nota fiscal",
+          "en":"Observations"
+        },
+        "description":{
+          "pt_BR":"Observações da nota fiscal.",
+          "en":"Observations."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      }
+    ]
+  },
+  "request":{
+    "method_name":"/vendas",
+    "json_api":true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name":"eNotas",
+  "app_id":"enotas",
+  "description":{
+    "pt_BR":"Nota Fiscal Eletrônica de Serviço Automática para Negócios Inteligentes",
+    "en":"Automatic Brazilian e-Service Tax Invoicing System"
+  },
+  "website":"http://enotas.com.br/",
+  "signup_url":"http://enotas.com.br/#planos",
+  "video":"",
+  "api_base_uri":{
+    "production":{
+      "uri":"https://app.enotas.com.br/api",
+      "label":"Produção",
+      "default":true
+    }
+  },
+  "authentication":{
+    "type":"pass_through_header",
+    "fields":[
+      {
+        "name":"apikey",
+        "label":"API Key",
+        "mapping":"Authorization",
+        "prefix":"Basic ",
+        "type":"text"
+      }
+    ],
+    "ping_request":{
+      "method_name":"/vendas/getFilterBy",
+      "params":{
+        "pageNumber":0,
+        "pageSize":1
+      }
+    }
+  }
+}

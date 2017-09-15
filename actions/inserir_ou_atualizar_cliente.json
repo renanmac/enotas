@@ -34,7 +34,7 @@
           "en":""
         }
       },
-	  {
+	    {
         "key":"inscricaoMunicipal",
         "name":{
           "pt_BR":"Inscrição municipal",
@@ -59,29 +59,29 @@
         }
       },
 	  {
-        "key":"inscricaoEstadual",
-        "name":{
-          "pt_BR":"Inscrição estadual",
-          "en":"Inscrição estadual"
-        },
-        "description":{
-          "pt_BR":"Inscrição estadual",
-          "en":"State registration"
-        },
-        "required":false,
-        "visible":true,
-        "advanced":true,
-        "field_type":"custom",
-        "data_type":"string",
-        "placeholder":{
-          "pt_BR":"",
-          "en":""
-        },
-        "label":{
-          "pt_BR":"",
-          "en":""
-        }
+      "key":"inscricaoEstadual",
+      "name":{
+        "pt_BR":"Inscrição estadual",
+        "en":"Inscrição estadual"
       },
+      "description":{
+        "pt_BR":"Inscrição estadual",
+        "en":"State registration"
+      },
+      "required":false,
+      "visible":true,
+      "advanced":true,
+      "field_type":"custom",
+      "data_type":"string",
+      "placeholder":{
+        "pt_BR":"",
+        "en":""
+      },
+      "label":{
+        "pt_BR":"",
+        "en":""
+      }
+    },
 	  {
         "key":"email",
         "name":{
@@ -94,7 +94,7 @@
         },
         "required":false,
         "visible":true,
-        "advanced":true,
+        "advanced":false,
         "field_type":"custom",
         "data_type":"string",
         "placeholder":{
@@ -118,7 +118,7 @@
         },
         "required":false,
         "visible":true,
-        "advanced":true,
+        "advanced":false,
         "field_type":"custom",
         "data_type":"string",
         "placeholder":{
@@ -130,7 +130,7 @@
           "en":""
         }
       },
-	  {
+	    {
         "key":"nome",
         "name":{
           "pt_BR":"Nome",
@@ -140,9 +140,9 @@
           "pt_BR":"Nome",
           "en":"Nome"
         },
-        "required":false,
+        "required":true,
         "visible":true,
-        "advanced":true,
+        "advanced":false,
         "field_type":"custom",
         "data_type":"string",
         "placeholder":{
@@ -154,7 +154,7 @@
           "en":""
         }
       },
-	  {
+	    {
         "key":"cpfCnpj",
         "name":{
           "pt_BR":"CPF/CNPJ",
@@ -166,7 +166,7 @@
         },
         "required":false,
         "visible":true,
-        "advanced":true,
+        "advanced":false,
         "field_type":"custom",
         "data_type":"string",
         "placeholder":{
@@ -178,7 +178,7 @@
           "en":""
         }
       },
-	  {
+	    {
         "key":"endereco.cidade",
         "name":{
           "pt_BR":"Cidade",
@@ -202,7 +202,7 @@
           "en":""
         }
       },
-	  {
+	    {
         "key":"endereco.logradouro",
         "name":{
           "pt_BR":"Logradouro",
@@ -226,7 +226,7 @@
           "en":""
         }
       },
-	  {
+	    {
         "key":"endereco.numero",
         "name":{
           "pt_BR":"Número",
@@ -250,7 +250,7 @@
           "en":""
         }
       },
-	  {
+	    {
         "key":"endereco.complemento",
         "name":{
           "pt_BR":"Complemento",
@@ -274,7 +274,7 @@
           "en":""
         }
       },
-	  {
+	    {
         "key":"endereco.bairro",
         "name":{
           "pt_BR":"Bairro",
@@ -298,7 +298,7 @@
           "en":""
         }
       },
-	  {
+	    {
         "key":"endereco.cep",
         "name":{
           "pt_BR":"Cep",

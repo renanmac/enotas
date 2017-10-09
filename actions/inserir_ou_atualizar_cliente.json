@@ -58,31 +58,31 @@
           "en":""
         }
       },
-	  {
-      "key":"inscricaoEstadual",
-      "name":{
-        "pt_BR":"Inscrição estadual",
-        "en":"Inscrição estadual"
+  	  {
+        "key":"inscricaoEstadual",
+        "name":{
+          "pt_BR":"Inscrição estadual",
+          "en":"Inscrição estadual"
+        },
+        "description":{
+          "pt_BR":"Inscrição estadual",
+          "en":"State registration"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
       },
-      "description":{
-        "pt_BR":"Inscrição estadual",
-        "en":"State registration"
-      },
-      "required":false,
-      "visible":true,
-      "advanced":true,
-      "field_type":"custom",
-      "data_type":"string",
-      "placeholder":{
-        "pt_BR":"",
-        "en":""
-      },
-      "label":{
-        "pt_BR":"",
-        "en":""
-      }
-    },
-	  {
+  	  {
         "key":"email",
         "name":{
           "pt_BR":"Email",
@@ -106,7 +106,7 @@
           "en":""
         }
       },
-	  {
+  	  {
         "key":"telefone",
         "name":{
           "pt_BR":"Telefone",
@@ -177,6 +177,21 @@
           "pt_BR":"",
           "en":""
         }
+      },
+      {
+        "key":"pesquisarPorEmail",
+        "name":{
+          "pt_BR":"Pesquisar por email",
+          "en":"Pesquisar por email"
+        },
+        "description":{
+          "pt_BR":"Buscar cliente por email para atualizar?",
+          "en":"Buscar cliente por email para atualizar?"
+        },
+        "required":false,
+        "visible":false,
+        "advanced":true,
+        "data_type":"boolean"
       },
 	    {
         "key":"endereco.cidade",

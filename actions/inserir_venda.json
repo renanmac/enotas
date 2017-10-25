@@ -421,6 +421,54 @@
         }
       },
       {
+        "key":"cliente.endereco.uf",
+        "name":{
+          "pt_BR":"UF",
+          "en":"State"
+        },
+        "description":{
+          "pt_BR":"UF do cliente.",
+          "en":"Customer's state."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"cliente.endereco.pais",
+        "name":{
+          "pt_BR":"País",
+          "en":"Country"
+        },
+        "description":{
+          "pt_BR":"País do cliente.",
+          "en":"Customer's country."
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
         "key":"produto.nome",
         "name":{
           "pt_BR":"Nome do produto",

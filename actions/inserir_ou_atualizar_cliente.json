@@ -336,6 +336,54 @@
           "pt_BR":"",
           "en":""
         }
+      },
+      {
+        "key":"endereco.uf",
+        "name":{
+          "pt_BR":"UF",
+          "en":"State"
+        },
+        "description":{
+          "pt_BR":"UF",
+          "en":"State"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
+      },
+      {
+        "key":"endereco.pais",
+        "name":{
+          "pt_BR":"País",
+          "en":"Country"
+        },
+        "description":{
+          "pt_BR":"País",
+          "en":"Country"
+        },
+        "required":false,
+        "visible":true,
+        "advanced":true,
+        "field_type":"custom",
+        "data_type":"string",
+        "placeholder":{
+          "pt_BR":"",
+          "en":""
+        },
+        "label":{
+          "pt_BR":"",
+          "en":""
+        }
       }
     ]
   },

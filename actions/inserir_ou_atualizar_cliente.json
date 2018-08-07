@@ -189,9 +189,31 @@
           "en":"Buscar cliente por email para atualizar?"
         },
         "required":false,
-        "visible":false,
+        "visible":true,
         "advanced":true,
-        "data_type":"boolean"
+        "field_type":"dropdown",
+        "data_type":"boolean",
+        "list":{
+          "type":"local",
+          "data":[
+            {
+              "label":"Sim",
+              "value":true
+            },
+            {
+              "label":"Não",
+              "value":false
+            }
+          ]
+        },
+        "placeholder":{
+          "pt_BR":"Selecionar resposta",
+          "en":"Select answer"
+        },
+        "label":{
+          "pt_BR":"Pesquisar por email",
+          "en":"Pesquisar por email"
+        }
       },
 	    {
         "key":"endereco.cidade",

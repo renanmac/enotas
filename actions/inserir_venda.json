@@ -13,15 +13,15 @@
       {
         "key":"data",
         "name":{
-          "pt_BR":"Data",
-          "en":"Data"
+          "pt_BR":"Data da venda",
+          "en":"Data da venda"
         },
         "description":{
           "pt_BR":"Data da venda",
           "en":"Sales Date"
         },
         "required":true,
-        "visible":false,
+        "visible":true,
         "advanced":false,
         "field_type":"custom",
         "data_type":"datetime",
